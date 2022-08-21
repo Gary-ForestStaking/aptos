@@ -53,11 +53,11 @@ git checkout --track origin/testnet
 ```
 Build aptos "Cli"
 ```bash
-cargo build -p aptos-node --release
+cargo build -p aptos --release
 ```
 Build aptos-node
 ```bash
-cargo build -p aptos --release
+cargo build -p aptos-node --release
 ```
 Move aptos-node to /usr/local/bin/
 ```bash
@@ -65,7 +65,7 @@ mv  ~/aptos-core/target/release/aptos-node /usr/local/bin
 ```
 Move aptos to /usr/local/bin/
 ```bash
-mv  ~/aptos-core/target/release/aptos-node /usr/local/bin
+mv  ~/aptos-core/target/release/aptos /usr/local/bin
 ```
 Set variables and create a directory for your Aptos files, "Change testnet and alice"
 ```bash
