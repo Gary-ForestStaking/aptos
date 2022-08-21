@@ -97,6 +97,9 @@ aptos genesis generate-layout-template --output-file ~/$WORKSPACE/layout.yaml
 ```
 Make it look exactly the same as below the only thing you need to change is users. The root key and chain_id needs to be the one in this example. 
 ```bash
+nano ~/$WORKSPACE/layout.yaml
+```
+```bash
 root_key: "D04470F43AB6AEAA4EB616B72128881EEF77346F2075FFE68E14BA7DEBD8095E"
 users: ["<username you specified from previous step>"]
 chain_id: 43
