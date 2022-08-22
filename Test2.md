@@ -246,7 +246,7 @@ Setup the validator node using operator account, and join the validator set. We 
 ```bash
 aptos init --profile ait3-operator \
 --private-key <operator_account_private_key> \
---rest-url http://ait3.aptosdev.com \
+--rest-url https://sherryx.aptosdev.com/ \
 --skip-faucet
 ```
 Update validator network addresses on chain owner address is the one from Petra.
