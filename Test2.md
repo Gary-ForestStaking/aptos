@@ -29,7 +29,7 @@ sudo apt update && sudo apt upgrade
 ```
 Install requirements.
 ```bash
-sudo apt install git curl unzip
+sudo apt install git curl unzip jq
 ```
 Clone the Aptos repo.
 ```bash
