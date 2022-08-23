@@ -256,8 +256,7 @@ Update validator network addresses on chain owner address is the one from Petra.
 aptos node update-validator-network-addresses  \
   --pool-address <owner-address> \
   --operator-config-file ~/$WORKSPACE/$USERNAME/operator.yaml \
-  --profile ait3-operator \
-  --private-key <owner-private-key>
+  --profile ait3-operator 
 ```
 Update validator consensus key on chain. Owner address is the one from Petra.
 ```bash
