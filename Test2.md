@@ -136,7 +136,7 @@ Copy validator.yaml
 mkdir ~/$WORKSPACE/config
 cp docker/compose/aptos-node/validator.yaml ~/$WORKSPACE/config/validator.yaml
 ```
-Edit the file so it looks similar to below changing testnet to what you set in the command "export WORKSPACE=testnet" and username in this example its alice from the command "export USERNAME=alice"
+Edit the file so it looks similar to below changing testnet to what you set in the command "export WORKSPACE=testnet" 
 ```bash
 nano ~/$WORKSPACE/config/validator.yaml
 ```
@@ -159,7 +159,7 @@ consensus:
       from_file:
         waypoint:
           from_file: ~/testnet/waypoint.txt
-        identity_blob_path: ~/testnet/alice/validator-identity.yaml
+        identity_blob_path: ~/testnet/keys/validator-identity.yaml
   quorum_store_poll_count: 1
 
 execution:
@@ -171,7 +171,7 @@ validator_network:
   mutual_authentication: true
   identity:
     type: "from_file"
-    path: ~/testnet/alice/validator-identity.yaml
+    path: ~/testnet/keys/validator-identity.yaml
 
 full_node_networks:
 - network_id:
