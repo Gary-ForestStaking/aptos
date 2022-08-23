@@ -191,7 +191,7 @@ Make a systemd service
 ```bash
 sudo nano /etc/systemd/system/aptosd.service
 ```
-Copy and paste below change testnet to what you set in the command "export WORKSPACE=testnet" that is the only thing to change here.
+Copy and paste below change testnet to what you set in the command "export WORKSPACE=testnet" if you are using another user change User=root and the location /root/ to match your user.
 
 To save press control x then press y
 ```bash
@@ -200,9 +200,9 @@ Description=Aptos
 After=network.target
 
 [Service]
-User=$USER
+User=root
 Type=simple
-ExecStart=/usr/local/bin/aptos-node -f $HOME/testnet/config/validator.yaml
+ExecStart=/usr/local/bin/aptos-node -f /root/testnet/config/validator.yaml
 Restart=on-failure
 LimitNOFILE=65535
 
