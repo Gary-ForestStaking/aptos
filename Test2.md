@@ -240,9 +240,9 @@ sudo systemctl daemon-reload
 sudo systemctl enable aptosd
 sudo systemctl restart aptosd
 ```
-If you need to check logs; 
+Make sure the service is running and active 
 ```bash
-journalctl -eu aptosd
+sudo systemctl status aptosd
 ```
 Setup the validator node using operator account, and join the validator set. We created before. account_private_key for operator can be found in the private-keys.yaml file under ~/$WORKSPACE/keys folder.
 ```bash
