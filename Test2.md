@@ -95,7 +95,7 @@ Create the layout template.
 ```bash
 aptos genesis generate-layout-template --output-file ~/$WORKSPACE/layout.yaml
 ```
-Make it look exactly the same as below the only thing you need to change is users. The root key and chain_id needs to be the one in this example. 
+Make it look exactly the same as below but with your username. The root key and chain_id needs to be the one in this example. 
 ```bash
 nano ~/$WORKSPACE/layout.yaml
 ```
