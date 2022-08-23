@@ -136,16 +136,16 @@ Copy validator.yaml
 mkdir ~/$WORKSPACE/config
 cp docker/compose/aptos-node/validator.yaml ~/$WORKSPACE/config/validator.yaml
 ```
-Edit the file so it looks similar to below changing testnet to what you set in the command "export WORKSPACE=testnet" 
+Edit the file so it looks similar to below changing testnet to what you set in the command "export WORKSPACE=testnet" and root if you are using a different user.
 ```bash
 nano ~/$WORKSPACE/config/validator.yaml
 ```
 ```bash
 base:
   role: "validator"
-  data_dir: "~/testnet/data"
+  data_dir: "/root/testnet/data"
   waypoint:
-    from_file: "~/testnet/waypoint.txt"
+    from_file: "/root/testnet/waypoint.txt"
 
 consensus:
   safety_rules:
@@ -153,17 +153,17 @@ consensus:
       type: "local"
     backend:
       type: "on_disk_storage"
-      path: ~/testnet/data/secure-data.json
+      path: /root/testnet/data/secure-data.json
       namespace: ~
     initial_safety_rules_config:
       from_file:
         waypoint:
-          from_file: ~/testnet/waypoint.txt
-        identity_blob_path: ~/testnet/keys/validator-identity.yaml
+          from_file: /root/testnet/waypoint.txt
+        identity_blob_path: /root/testnet/keys/validator-identity.yaml
   quorum_store_poll_count: 1
 
 execution:
-  genesis_file_location: "~/testnet/genesis.blob"
+  genesis_file_location: "/root/testnet/genesis.blob"
   concurrency_level: 4
 
 validator_network:
@@ -171,7 +171,7 @@ validator_network:
   mutual_authentication: true
   identity:
     type: "from_file"
-    path: ~/testnet/keys/validator-identity.yaml
+    path: /root/testnet/keys/validator-identity.yaml
 
 full_node_networks:
 - network_id:
@@ -185,6 +185,7 @@ full_node_networks:
 api:
   enabled: true
   address: "0.0.0.0:8080"
+
 ```
 Make a systemd service
 ```bash
