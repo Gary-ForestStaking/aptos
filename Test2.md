@@ -81,14 +81,15 @@ Generate keys.
 ```bash
 aptos genesis generate-keys --output-dir ~/$WORKSPACE/keys
 ```
-Configure validator information add your ipaddress below<br>
+Configure validator information add your ipaddresses below<br>
 This creates a new folder from your username above with 2 files owner.yaml and operator.yaml
 ```bash
 aptos genesis set-validator-configuration \
     --local-repository-dir ~/$WORKSPACE \
     --username $USERNAME \
     --owner-public-identity-file ~/$WORKSPACE/keys/public-keys.yaml \
-    --validator-host IPADDRESSHERE:6180 \
+    --validator-host 34.135.169.144:6180 \
+    --full-node-host 34.135.169.144:6182 \
     --stake-amount 100000000000000
 ```
 Create the layout template.
