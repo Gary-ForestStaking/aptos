@@ -1,4 +1,4 @@
-# Instructions Aptos Testnet Test2
+# Validator Instructions Aptos Testnet Test2
 Download Wallet "Petra" for Chrome.
 
 https://github.com/aptos-labs/aptos-core/releases?q=wallet&expanded=true
