@@ -81,8 +81,8 @@ Generate keys.
 ```bash
 aptos genesis generate-keys --output-dir ~/$WORKSPACE/keys
 ```
-Configure validator information add your ipaddresses below<br>
-This creates a new folder from your username above with 2 files owner.yaml and operator.yaml
+Configure validator information add your ipaddresses below. The --full-node-host flag is optional.
+This creates a new folder from your username above with 2 files owner.yaml and operator.yaml 
 ```bash
 aptos genesis set-validator-configuration \
     --local-repository-dir ~/$WORKSPACE \
